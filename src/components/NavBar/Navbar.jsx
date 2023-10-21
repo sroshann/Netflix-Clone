@@ -1,13 +1,38 @@
 import './Navbar.css'
-import React from 'react'
+import React, { useState , useEffect } from 'react'
 
 function Navbar() {
+
+    const [ small , changeSmall ] = useState( false )
+
+    useEffect( () => {
+
+        winidowWidth()
+        window.addEventListener( 'resize' , winidowWidth)
+
+        return () => {
+
+            window.removeEventListener('resize', winidowWidth);
+
+        }
+
+    } , [] )
+
+    const winidowWidth = () => {
+
+        const width = window.innerWidth
+        console.log(width);
+        if ( width <= 767 ) changeSmall( true )
+        else changeSmall( false )
+
+    }
+
     return (
         <div className='nav-bar'>
 
             <div className="left-section">
 
-                <img className='netflix-logo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png" alt="logo" />
+                <img className={ small ? 'netflix-N-logo' : 'netflix-logo' } src={ small ? "https://upload.wikimedia.org/wikipedia/commons/3/35/Nficon2016.png?" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png" } alt="logo" />
                 <div className="left-lists">
 
                     <ul className='menu' >
