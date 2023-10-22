@@ -1,10 +1,10 @@
 import React from 'react'
 import './Banner.css'
 
-function Banner( { variable_small } ) {
+function Banner( { variable_small , variable_responsive } ) {
 
   return (
-    <div className='banner' >
+    <div className={ variable_responsive ? 'variable-responsive-banner' : 'banner' } >
         
         <section className={ variable_small ? 'responsive-contents' : "contents" }>
 

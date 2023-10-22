@@ -1,7 +1,7 @@
 import './Navbar.css'
 import React, { useState, useEffect } from 'react'
 
-function Navbar( { takeSmall } ) {
+function Navbar( { takeSmall , takeResponsive } ) {
 
     const [small, changeSmall] = useState(false)
     const [responsiveNav, visibleresponsiveNav] = useState(false)
@@ -34,8 +34,8 @@ function Navbar( { takeSmall } ) {
 
                 <img onClick={(e) => {
 
-                    if (responsiveNav) visibleresponsiveNav(false, changeSmall(true))
-                    else if (e.target.className === 'netflix-N-logo') visibleresponsiveNav(true, changeSmall(false))
+                    if (responsiveNav) visibleresponsiveNav(false, changeSmall(true) , takeResponsive( false ))
+                    else if (e.target.className === 'netflix-N-logo') visibleresponsiveNav(true, changeSmall(false) , takeResponsive( true ))
 
                 }} className={(small || responsiveNav) ? 'netflix-N-logo' : 'netflix-logo'} src={(small || responsiveNav) ? "https://upload.wikimedia.org/wikipedia/commons/3/35/Nficon2016.png?" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png"} alt="logo" />
                 {!small && <div className={responsiveNav ? 'responsive-left-lists' : 'left-lists'} >
