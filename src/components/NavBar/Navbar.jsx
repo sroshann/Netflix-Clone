@@ -17,7 +17,7 @@ function Navbar( { takeSmall , takeResponsive } ) {
 
         }
 
-    }, [])
+    } , [] )
 
     const winidowWidth = () => {
 
