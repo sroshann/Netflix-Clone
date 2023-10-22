@@ -1,7 +1,7 @@
 import './Navbar.css'
 import React, { useState, useEffect } from 'react'
 
-function Navbar() {
+function Navbar( { takeSmall } ) {
 
     const [small, changeSmall] = useState(false)
     const [responsiveNav, visibleresponsiveNav] = useState(false)
@@ -22,9 +22,8 @@ function Navbar() {
     const winidowWidth = () => {
 
         const width = window.innerWidth
-        console.log(width);
-        if (width <= 767) changeSmall(true)
-        else changeSmall(false)
+        if (width <= 767) changeSmall( true , takeSmall( true ) )
+        else changeSmall(false , takeSmall( false ))
 
     }
 
@@ -75,11 +74,7 @@ function Navbar() {
 
             </div>
 
-            <div className={responsiveNav ? "responsive-menu" : 'not-responsive-menu'}>
-
-
-
-            </div>
+            <div className={responsiveNav ? "responsive-menu" : 'not-responsive-menu'}></div>
 
         </div>
     )

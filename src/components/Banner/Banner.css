@@ -28,7 +28,7 @@
 
 }
 
-.buttons button {
+.buttons {
 
     color: white;
     outline: none;
@@ -45,7 +45,7 @@
 
 }
 
-.buttons button:hover {
+.buttons:hover {
 
     color: black;
     background-color: #e6e6e6;
@@ -53,7 +53,7 @@
 
 }
 
-.buttons button:not(:hover) { transition: 0.3s; }
+.buttons:not(:hover) { transition: 0.3s; }
 
 .description {
 
@@ -74,3 +74,54 @@
     background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
 
 }
+
+/* MAKING RESPONSIVE */
+
+.responsive-description { display: none; }
+
+.responsive-contents {
+
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 240px;
+    left: 50px;
+    color: white;
+    border: 0;
+    filter: drop-shadow(0px 0px 30px #111);
+
+}
+
+.responsive-movie-title {
+
+    font-size: 2.3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+
+}
+
+.responsive-buttons {
+
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    width: 70px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(51, 51, 51, 0.5);
+    cursor: pointer;
+    margin-right: 1rem;
+
+}
+
+.responsive-buttons:hover {
+
+    color: black;
+    background-color: #e6e6e6;
+    transition: 0.3s;
+
+}
+
+.responsive-buttons:not(:hover) { transition: 0.3s; }

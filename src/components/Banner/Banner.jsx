@@ -1,20 +1,21 @@
 import React from 'react'
 import './Banner.css'
 
-function Banner() {
+function Banner( { variable_small } ) {
+
   return (
     <div className='banner' >
         
-        <section className="contents">
+        <section className={ variable_small ? 'responsive-contents' : "contents" }>
 
-            <h1 className='movie-title' >Movie Title</h1>
-            <div className='buttons' >
+            <h1 className={ variable_small ? 'responsive-movie-title' : 'movie-title' } >Movie Title</h1>
+            <div >
 
-                <button>Play</button>
-                <button>My List</button>
+                <button className={ variable_small ? 'responsive-buttons' : 'buttons' } >My List</button>
+                <button className={ variable_small ? 'responsive-buttons' : 'buttons' } >Play</button>
 
             </div>
-            <h1 className="description">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the</h1>
+            <h1 className={ variable_small ? 'responsive-description' : 'description' }>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the</h1>
             
         </section>
         <section className="fade-bottom"></section>
@@ -24,3 +25,4 @@ function Banner() {
 }
 
 export default Banner
+
