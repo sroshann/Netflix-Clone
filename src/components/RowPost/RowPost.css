@@ -6,6 +6,7 @@
 }
 
 .category-title { font-size: medium; }
+.original-category-title{ font-size: x-large; }
 
 .posters {
 
@@ -16,16 +17,18 @@
 
 }
 
-.poster {
+.poster , .original-poster {
 
     max-height: 250px;
     margin-right: 10px;
 
 }
 
+.original-poster { max-height: 275px; }
+
 .posters::-webkit-scrollbar { display: none; }
 
-.upper-fade {
+.upper-fade , .responsive-upper-fade {
 
     height: 45px;
     width: 100%;
@@ -37,7 +40,9 @@
 
 }
 
-.lower-fade {
+.responsive-upper-fade { margin-top: -10px; }
+
+.lower-fade , .original-lower-fade {
 
     height: 45px;
     width: 100%;
@@ -48,13 +53,15 @@
 
 }
 
+.original-lower-fade { margin-top: 238px; }
+
 .responsive-lower-fade {
 
     height: 45px;
     width: 100%;
     position: absolute;
     margin-left: -16px;
-    margin-top: 143px;
+    margin-top: 144px;
     background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
 
 }
@@ -66,11 +73,11 @@
 
 }
 
-.poster:hover , .small-poster:hover {
+.poster:hover , .small-poster:hover , .original-poster:hover {
 
     transform: scale(1.2);
     transition: 0.3s;
 
 }
 
-.poster:not(:hover) , .small-poster:not(:hover) {transition: 0.3s;}
+.poster:not(:hover) , .small-poster:not(:hover) , .original-poster:not(:hover) {transition: 0.3s;}
