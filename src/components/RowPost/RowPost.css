@@ -1,0 +1,49 @@
+.row-post {
+
+    margin-left: 8px;
+    color: #fff;
+
+}
+
+.category-title { font-size: medium; }
+
+.posters {
+
+    display: flex;
+    padding: 8px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+}
+
+.poster {
+
+    max-height: 250px;
+    margin-right: 10px;
+
+}
+
+.posters::-webkit-scrollbar { display: none; }
+
+.upper-fade {
+
+    height: 45px;
+    width: 100%;
+    position: absolute;
+    margin-left: -16px;
+    /* background-color: yellow; */
+    background-image: linear-gradient(180deg,#111,rgba(37,37,37,0.61),transparent);
+
+}
+
+.lower-fade {
+
+    height: 45px;
+    width: 100%;
+    position: absolute;
+    margin-left: -16px;
+    margin-top: 213px;
+    /* background-color: yellowgreen; */
+    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
+
+}

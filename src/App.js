@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Banner from './components/Banner/Banner';
 import Navbar from './components/NavBar/Navbar';
+import RowPost from './components/RowPost/RowPost';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
 
       <Navbar takeSmall={ takeSmall } takeResponsive={ takeResponsive } />
       <Banner variable_small={ variable_small } variable_responsive={ variable_responsive } />
+      <RowPost/>
       
     </div>
   );
