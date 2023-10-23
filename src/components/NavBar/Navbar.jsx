@@ -1,10 +1,11 @@
 import './Navbar.css'
 import React, { useState, useEffect } from 'react'
 
-function Navbar( { takeSmall , takeResponsive } ) {
+function Navbar({ takeSmall, takeResponsive }) {
 
     const [small, changeSmall] = useState(false)
     const [responsiveNav, visibleresponsiveNav] = useState(false)
+    const [colour, setColour] = useState(false)
 
     useEffect(() => {
 
@@ -17,25 +18,34 @@ function Navbar( { takeSmall , takeResponsive } ) {
 
         }
 
-    } , [] )
+    }, [])
 
     const winidowWidth = () => {
 
         const width = window.innerWidth
-        if (width <= 767) changeSmall( true , takeSmall( true ) )
-        else changeSmall(false , takeSmall( false ))
+        if (width <= 767) changeSmall(true, takeSmall(true))
+        else changeSmall(false, takeSmall(false))
 
     }
 
+    const changeColour = () => {
+
+        if (window.scrollY >= 170) setColour(true)
+        else setColour(false)
+
+    }
+
+    window.addEventListener('scroll', changeColour)
+
     return (
-        <div className='nav-bar'>
+        <div className={ colour ? 'nav-bar change-colour' : 'nav-bar' }>
 
             <div className="left-section">
 
                 <img onClick={(e) => {
 
-                    if (responsiveNav) visibleresponsiveNav(false, changeSmall(true) , takeResponsive( false ))
-                    else if (e.target.className === 'netflix-N-logo') visibleresponsiveNav(true, changeSmall(false) , takeResponsive( true ))
+                    if (responsiveNav) visibleresponsiveNav(false, changeSmall(true), takeResponsive(false))
+                    else if (e.target.className === 'netflix-N-logo') visibleresponsiveNav(true, changeSmall(false), takeResponsive(true))
 
                 }} className={(small || responsiveNav) ? 'netflix-N-logo' : 'netflix-logo'} src={(small || responsiveNav) ? "https://upload.wikimedia.org/wikipedia/commons/3/35/Nficon2016.png?" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png"} alt="logo" />
                 {!small && <div className={responsiveNav ? 'responsive-left-lists' : 'left-lists'} >

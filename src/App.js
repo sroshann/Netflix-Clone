@@ -15,6 +15,15 @@ function App() {
       <Navbar takeSmall={ takeSmall } takeResponsive={ takeResponsive } />
       <Banner variable_small={ variable_small } variable_responsive={ variable_responsive } />
       <RowPost variable_small={ variable_small } />
+      <RowPost variable_small={ variable_small } />
+      <RowPost variable_small={ variable_small } />
+      <RowPost variable_small={ variable_small } />
+      <RowPost variable_small={ variable_small } />
+      <RowPost variable_small={ variable_small } />
+      <RowPost variable_small={ variable_small } />
+      <RowPost variable_small={ variable_small } />
+      <RowPost variable_small={ variable_small } />
+      <RowPost variable_small={ variable_small } />
       
     </div>
   );
