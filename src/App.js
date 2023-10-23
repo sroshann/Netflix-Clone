@@ -14,7 +14,7 @@ function App() {
 
       <Navbar takeSmall={ takeSmall } takeResponsive={ takeResponsive } />
       <Banner variable_small={ variable_small } variable_responsive={ variable_responsive } />
-      <RowPost/>
+      <RowPost variable_small={ variable_small } />
       
     </div>
   );

@@ -30,9 +30,10 @@
     height: 45px;
     width: 100%;
     position: absolute;
+    margin-top: -8px;
     margin-left: -16px;
-    /* background-color: yellow; */
     background-image: linear-gradient(180deg,#111,rgba(37,37,37,0.61),transparent);
+    z-index: 1;
 
 }
 
@@ -43,7 +44,33 @@
     position: absolute;
     margin-left: -16px;
     margin-top: 213px;
-    /* background-color: yellowgreen; */
     background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
 
 }
+
+.responsive-lower-fade {
+
+    height: 45px;
+    width: 100%;
+    position: absolute;
+    margin-left: -16px;
+    margin-top: 143px;
+    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
+
+}
+
+.small-poster {
+
+    max-height: 180px;
+    margin-right: 10px;
+
+}
+
+.poster:hover , .small-poster:hover {
+
+    transform: scale(1.2);
+    transition: 0.3s;
+
+}
+
+.poster:not(:hover) , .small-poster:not(:hover) {transition: 0.3s;}
