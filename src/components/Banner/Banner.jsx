@@ -30,7 +30,7 @@ function Banner( { variable_small , variable_responsive } ) {
 
   return (
 
-    <div className={ variable_responsive ? 'variable-responsive-banner' : 'banner' } 
+    <div className={ variable_responsive  ? 'variable-responsive-banner' : variable_small ? 'variable-responsive-banner' : 'banner' } 
       style={ { backgroundImage : `url( ${ movie ? imageURL + movie.backdrop_path : "" }  )` } }>
         
         <section className={ variable_small ? 'responsive-contents' : "contents" }>
@@ -45,7 +45,7 @@ function Banner( { variable_small , variable_responsive } ) {
             <h1 className={ variable_small ? 'responsive-description' : 'description' }>{ movie ? movie.overview : "" }</h1>
             
         </section>
-        <section className="fade-bottom"></section>
+        <section className={ variable_small ? 'responsive-fade-bottom' : "fade-bottom" }></section>
 
     </div>
   )

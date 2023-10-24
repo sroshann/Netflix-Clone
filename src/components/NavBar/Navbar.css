@@ -1,4 +1,4 @@
-.nav-bar {
+.nav-bar , .responsive-nav {
 
     position: fixed;
     top: 0;
@@ -22,6 +22,8 @@
 
 }
 
+.responsive-nav {height: 10px;}
+
 .netflix-logo {
 
     position: fixed;
@@ -35,8 +37,8 @@
 
     position: fixed;
     left: 20px;
-    width: 35px;
-    top: 19px;
+    width: 23px;
+    top: 13px;
     z-index: 1;
 
 }
@@ -76,7 +78,7 @@
 
 }
 
-.search {
+.search , .responsive-search {
 
     position: fixed;
     top: 20px;
@@ -85,6 +87,14 @@
     align-items: center;
     background-color: #232B2B;
     border-radius: 5px;
+
+}
+
+.responsive-search {
+
+    position: absolute;
+    top: 14px;
+    right: 120px;
 
 }
 
@@ -105,7 +115,7 @@
 .search i , .responsive-search i { padding-right: 5px; }
 .search i:hover , .responsive-search i:hover { cursor: pointer; }
 
-#notification {
+#notification , #responsive-notification {
 
     position: fixed;
     top: 28px;
@@ -113,12 +123,27 @@
 
 }
 
-.netflix-avatar {
+#responsive-notification {
+
+    top: 18.5px;
+    right: 55px;
+    font-size: small;
+
+}
+
+.netflix-avatar , .responsive-netflix-avatar {
 
     position: fixed;
     right: 20px;
     width: 30px;
     top: 20px;
+
+}
+
+.responsive-netflix-avatar {
+
+    width: 23px;
+    top: 13px;
 
 }
 
@@ -183,23 +208,13 @@
 
 }
 
-.responsive-search {
-
-    position: absolute;
-    top: 20.5px;
-    right: 140px;
-    display: flex;
-    align-items: center;
-    background-color: #232B2B;
-    border-radius: 5px;
-
-}
-
 .responsive-search input { 
 
-    width: 130px;
-    height: 28px;
-
+    width: 105px;
+    height: 23px;
+    font-size: xx-small;
 }
+
+#search-icon { font-size: x-small; }
 
 .null { display: none; }

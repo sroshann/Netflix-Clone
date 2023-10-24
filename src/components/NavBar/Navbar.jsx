@@ -37,8 +37,29 @@ function Navbar({ takeSmall, takeResponsive }) {
 
     window.addEventListener('scroll', changeColour)
 
+    const determineClass = () => {
+
+        // This function determines the class of nav bar according to changing colour 
+        // and small
+
+        // small ? ( colour ? 'responsive-nav change-colour' : 'responsive-nav' ) : ( colour ? 'nav-bar change-colour' : 'nav-bar' )
+
+        if ( small ) {
+
+            if ( colour ) return 'responsive-nav change-colour'
+            else return 'responsive-nav'
+
+        } else {
+
+            if ( colour ) return 'nav-bar change-colour'
+            else return 'nav-bar'
+
+        }
+
+    }
+
     return (
-        <div className={ colour ? 'nav-bar change-colour' : 'nav-bar' }>
+        <div className={ determineClass() }>
 
             <div className="left-section">
 
@@ -63,10 +84,10 @@ function Navbar({ takeSmall, takeResponsive }) {
             </div>
             <div className="right-section">
 
-                <div className={(small || responsiveNav) ? 'responsive-search' : 'search'}>
+                <div className={ small || responsiveNav ? 'responsive-search' : 'search'}>
 
                     <input type="text" placeholder='Search' />
-                    <i class='bx bx-search'></i>
+                    <i id={ small || responsiveNav ? 'search-icon' : '' } class='bx bx-search'></i>
 
                 </div>
                 {!small && <div className={responsiveNav ? 'responsive-right-lists' : 'right-lists'}>
@@ -79,8 +100,8 @@ function Navbar({ takeSmall, takeResponsive }) {
                     </ul>
 
                 </div>}
-                <i id='notification' class='bx bxs-bell'></i>
-                <img className='netflix-avatar' src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png" alt="avatar" />
+                <i id={ small || responsiveNav ? 'responsive-notification' : 'notification' } class='bx bxs-bell'></i>
+                <img className={ small || responsiveNav ? 'responsive-netflix-avatar' : 'netflix-avatar' } src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png" alt="avatar" />
 
             </div>
 
