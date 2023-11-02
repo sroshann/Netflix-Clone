@@ -81,3 +81,19 @@
 }
 
 .poster:not(:hover) , .small-poster:not(:hover) , .original-poster:not(:hover) {transition: 0.3s;}
+
+#yt-videos { 
+    
+    padding-left: 10px;
+
+}
+
+#play-yt-videos {
+
+    display: flex;
+    padding: 8px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+#play-yt-videos::-webkit-scrollbar { display: none; }
