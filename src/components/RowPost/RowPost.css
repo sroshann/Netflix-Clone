@@ -82,11 +82,7 @@
 
 .poster:not(:hover) , .small-poster:not(:hover) , .original-poster:not(:hover) {transition: 0.3s;}
 
-#yt-videos { 
-    
-    padding-left: 10px;
-
-}
+#yt-videos { padding-left: 10px; }
 
 #play-yt-videos {
 
@@ -95,5 +91,8 @@
     overflow-x: scroll;
     overflow-y: hidden;
 }
+
+#one-yt-videos { padding: 8px; }
+#one-yt-videos #yt-videos { padding: 0; }
 
 #play-yt-videos::-webkit-scrollbar { display: none; }

@@ -27,28 +27,30 @@ function RowPost(props) {
   }, [])
 
   const opts = {
+
     height: '250',
-    width: '420',
+    width: trailer.length === 1 ? '100%' : '450',
     playerVars: {
-      // https://developers.google.com/youtube/player_parameters
       autoplay: 0,
     },
+
   };
 
   const small_opts = {
+
     height: '150',
-    width: '250',
+    width: trailer.length === 1 ? '100%' : '',
     playerVars: {
-      // https://developers.google.com/youtube/player_parameters
       autoplay: 0,
     },
+
   };
 
   const playTrailers = (movie_id) => {
 
     axios.get(`movie/${movie_id}/videos?api_key=${API_KEY}&language=en-US`).then(response => {
 
-      console.log( response.data )
+      // console.log( response.data )
       if (response.data.results.length !== 0) setTrailers(response.data.results)
       else alert('Video not found')
 
@@ -82,7 +84,7 @@ function RowPost(props) {
 
       </div>
 
-      <div id="play-yt-videos">
+      <div id={ trailer.length === 1 ? 'one-yt-videos' : "play-yt-videos" }>
 
         {trailer && trailer.map((trailer_obj) =>
 
